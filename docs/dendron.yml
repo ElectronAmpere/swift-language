@@ -5,7 +5,7 @@ dev:
 commands:
     lookup:
         note:
-            selectionMode: extract
+            selectionMode: link
             confirmVaultOnCreate: true
             vaultSelectionModeOnCreate: smart
             leaveTrace: false
@@ -73,10 +73,10 @@ workspace:
     maxNoteLength: 204800
     enableFullHierarchyNoteTitle: false
 preview:
-    enableFMTitle: true
+    enableFMTitle: false
     enableNoteTitleForLink: true
     enableFrontmatterTags: true
-    enableHashesForFMTags: false
+    enableHashesForFMTags: true
     enablePrettyRefs: true
     enableKatex: true
     automaticallyShowPreview: false
