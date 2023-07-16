@@ -1,0 +1,29 @@
+{
+    "recommendations": [
+        "felixicaza.andromeda",
+        "teabyii.ayu",
+        "ms-vscode.cpptools",
+        "vadimcn.vscode-lldb",
+        "dendron.dendron",
+        "dendron.dendron-markdown-notes",
+        "dendron.dendron-markdown-preview-enhanced",
+        "dendron.dendron-markdown-shortcuts",
+        "dendron.dendron-paste-image",
+        "dendron.dendron-snippet-maker",
+        "cschlosser.doxdocgen",
+        "github.vscode-github-actions",
+        "github.github-vscode-theme",
+        "gitlab.gitlab-workflow",
+        "zaaack.markdown-editor",
+        "yzane.markdown-pdf",
+        "bierner.markdown-mermaid",
+        "davidanson.vscode-markdownlint",
+        "gulajavaministudio.mayukaithemevsc",
+        "tomoyukim.vscode-mermaid-editor",
+        "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+        "mintlify.document",
+        "ms-python.python",
+        "sswg.swift-lang",
+        "redhat.vscode-yaml"
+    ]
+}
