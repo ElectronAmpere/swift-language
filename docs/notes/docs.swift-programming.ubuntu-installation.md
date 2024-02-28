@@ -2,7 +2,7 @@
 id: 8p8n78se7yo8z162un5c5am
 title: Ubuntu Installation
 desc: ''
-updated: 1687018665116
+updated: 1689496430487
 created: 1686993261698
 ---
 ## Installation Process
