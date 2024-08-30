@@ -1,0 +1,118 @@
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER_EXTRA: \geometry{top=1in, bottom=1in, left=1in, right=1in}
+#+LATEX_HEADER_EXTRA: \usepackage{hyperref}
+#+LATEX_HEADER_EXTRA: \hypersetup{linktoc=all, pdfborder={0 0 0}, colorlinks=true, linkcolor=blue, urlcolor=blue}
+#+LATEX_HEADER_EXTRA: \usepackage{listings}
+#+LATEX_HEADER_EXTRA: \lstset{basicstyle=\ttfamily\small, breaklines=true, frame=single, breakatwhitespace=true, columns=flexible, keepspaces=true, xleftmargin=1em, xrightmargin=1em, showstringspaces=false}
+#+DESCRIPTION:
+#+KEYWORDS:
+#+SUBTITLE:
+#+LATEX_ENGRAVED_THEME:
+#+LATEX_COMPILER: pdflatex
+* Installation Process
+
+To install Swift, follow the steps mentioned below:
+
+** Download
+
+Download the Swift release package from [[https://www.swift.org/download/][Swift Download]].
+
+** Pre-requisities
+
+Run the following command before installing the Swift package:
+
+#+BEGIN_SRC sh
+sudo apt-get install binutils\
+                     git\
+                     gnupg2\
+                     libc6-dev\
+                     libcurl4-openssl-dev\
+                     libedit2\
+                     libgcc-9-dev\
+                     libpython3.8\
+                     libsqlite3-0\
+                     libstdc++-9-dev\
+                     libxml2-dev\
+                     libz3-dev\
+                     pkg-config\
+                     tzdata\
+                     unzip\
+                     zlib1g-dev
+#+END_SRC
+
+** Terminal Commands
+
+Swift can be downloaded either from the [[[[Download]]]] section or using the =wget= command.
+
+*** Downloading via =wget=
+
+The tarball is downloaded using the following command:
+
+#+BEGIN_SRC sh
+  wget https://download.swift.org/swift-5.8.1-release/ubuntu2004/\
+       swift-5.8.1-RELEASE/swift-5.8.1-RELEASE-ubuntu20.04.tar.gz
+#+END_SRC
+
+The signature for the tarball is downloaded using the following command:
+
+#+BEGIN_SRC sh
+    wget https://download.swift.org/swift-5.8.1-release/ubuntu2004/\
+	 swift-5.8.1-RELEASE/swift-5.8.1-RELEASE-ubuntu20.04.tar.gz.sig
+#+END_SRC
+
+*** Verify Signature
+
+To verify the signature:
+
+#+BEGIN_SRC sh
+wget -q -O - https://swift.org/keys/all-keys.asc | gpg --import -
+#+END_SRC
+
+Refresh the keys:
+
+#+BEGIN_SRC sh
+gpg --keyserver hkp://keyserver.ubuntu.com --refresh-keys Swift
+#+END_SRC
+
+Verify the downloaded tarball:
+
+#+BEGIN_SRC sh
+gpg --verify swift-5.8.1-RELEASE-ubuntu20.04.tar.gz.sig
+#+END_SRC
+
+*** Extract Package
+
+The tarball is extracted using:
+
+#+BEGIN_SRC sh
+tar -xvzf swift-5.8.1-RELEASE-ubuntu20.04.tar.gz
+#+END_SRC
+
+Move the package to the =/opt/= directory to manage similarly installed packages:
+
+#+BEGIN_SRC sh
+sudo mv swift-5.8.1-RELEASE-ubuntu20.04 /opt/swift
+#+END_SRC
+
+*** Setting Up Environment Path
+
+Navigate to the =/opt/swift/bin= directory:
+
+#+BEGIN_SRC sh
+cd /opt/swift/
+cd usr/bin
+pwd
+#+END_SRC
+
+Copy the path to the source file:
+
+#+BEGIN_SRC sh
+echo "export PATH=/opt/swift/usr/bin:$PATH" >>~/.bashrc
+source ~/.bashrc
+#+END_SRC
+
+* Links
+
+- [[https://itsfoss.com/use-swift-linux/#installing-swift-on-ubuntu-linux][Swift Installation by itsfoss]]
